@@ -14,6 +14,10 @@ function App() {
     dispatch({type:"INCREMENT", payload:{num:5}})
   }
 
+  const decrease = () => {
+    dispatch({type:"DECREMENT", payload:{num:5}})
+  }
+
   const login = () => {
     dispatch({type:"LOGIN", payload:{id: "nonna", password:"123"}})
   }

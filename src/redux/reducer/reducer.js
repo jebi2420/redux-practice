@@ -14,7 +14,9 @@ function reducer(state=initialState, action){
     // switch로 쓰는 경우 (if문 쓸지 switch쓸지는 회사마다 다름)
     switch(action.type){
         case "INCREMENT":
-            return {...state, count: state.count + 1};
+            return {...state, count: state.count + action.payload.num};
+        case "DECREMENT":
+            return {...state, count: state.count - action.payload.num};
         case "LOGIN":
             return {
                 ...state, 
